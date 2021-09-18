@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+Flask App integrate with HTML
+"""
 import os
 from flask import Flask, jsonify
 from models import storage

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-creates a blueprint instances of appviews
+blueprint instances
 """
 import flask
 

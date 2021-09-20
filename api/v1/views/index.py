@@ -42,3 +42,6 @@ def stats():
         for key, value in PLURALS.items():
             response[value] = storage.count(key)
         return jsonify(response)
+
+    if __name__ == "__main__":
+        app.run(host='0.0.0.0', port=5000)

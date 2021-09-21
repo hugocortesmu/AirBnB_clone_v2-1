@@ -3,7 +3,7 @@
 Flask App integrate with HTML
 """
 import os
-from flask import Flask, jsonify
+from flask import Flask, make_response, jsonify
 from models import storage
 from api.v1.views import app_views
 from flask import Blueprint
@@ -19,6 +19,9 @@ def teardown_db(exception):
     storage.close()
 
 app.register_blueprint(app_views)
+
+@app.errorhandler(Exception)
+def error_no_found(err):
 
 if __name__ == "__main__":
 	app.run(host=os.getenv('HBNB_API_HOST') or '0.0.0.0',
